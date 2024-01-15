@@ -19,7 +19,8 @@
             "A really good movie, yet painful to watch",
             "Political satire at its best",
             "Hits a Little Too Close to Home"
-          ]
+          ],
+          "inCart": false
       },
       {
           "id": 2,
@@ -38,7 +39,8 @@
             "DISAPPOINTING FINALE",
             "Olivia Colman gets intense",
             "Not impressed- good acting though in boring film"
-          ]
+          ],
+          "inCart": false
       },
       {
           "id": 3,
@@ -58,7 +60,8 @@
             "Essentially a big and silly version of a Charlie's Angels episode",
             "Almost fell asleep",
             "Underrated Star-Studded Action"
-          ]
+          ],
+          "inCart": false
       },
       {
           "id": 4,
@@ -79,7 +82,8 @@
             "Phenomenal conclusion",
             "Somehow better than Endgame",
             "Great concept, mediocre execution"
-          ]
+          ],
+          "inCart": false
       },
       {
           "id": 5,
@@ -99,7 +103,8 @@
             "Rushed clumsy b-movie",
             "Feels like cheap TV",
             "It's hard to figure out what's the purpose here"
-          ]
+          ],
+          "inCart": false
       }
       
   ]
