@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import './App.css';
+import Navbar from "./Navbar";
 
 function HomePage({ isLoggedIn, setIsLoggedIn }) {
     const [username, setUsername] = useState('')
@@ -16,14 +17,9 @@ function HomePage({ isLoggedIn, setIsLoggedIn }) {
     return (
         <div className="HomePage">
             <header className="HomeHeader">
-                <p>{username} 👤</p>
                 <h1 >SITE NAME</h1>
+                <Navbar />
             </header>
-            <div className="Login">
-                <h1>Login</h1>
-                <input type="textbox" name='name' value={username} onChange={HandleChange} button={<input type='button' name='SubmitUsername' value='checkState' onClick={HandleClick}/> } />
-                <input type='button' name='SubmitUsername' value='checkState' onClick={HandleClick}/> 
-            </div>
         </div>
     )
 }

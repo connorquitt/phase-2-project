@@ -12,12 +12,23 @@ function MoviePage() {
     .then(data => setMovieList(data))
     }, [])
 
+    function handleLike(event) {
+        console.log(event.target.id)
+        let currentMovie = movieList.filter((movie) => {
+            return event.target.id == movie.id
+        })
+         console.log(currentMovie)
+    }
+
     return (
         <div className="MovieHeader">
+            <button>Home</button>
             <h1>Movie List</h1>
-            <MovieCard movieList={movieList}/>
+            <MovieCard movieList={movieList} handleLike={handleLike}/>
         </div>
     )
 }
 
 export default MoviePage;
+
+//make post thing work :(

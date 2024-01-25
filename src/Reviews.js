@@ -4,18 +4,22 @@ import './App.css';
 
 function Reviews() {
 
-    const [reviews, setReviews] = useState([])
+    const [reviews, setReviews] = useState('')
 
     useEffect(() =>{
-        fetch(`http://localhost:3000/Movies/1`)
+        fetch(`http://localhost:3000/Movies/3`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
 
 
     function ReviewCard() {
-        return (
-            reviews.reviews.map((review, index) => {
+        if(typeof reviews === 'string') {
+           return <div>
+                    <p>Reviews Loading...</p>
+                </div>
+        } else {
+            return reviews.reviews.map((review, index) => {
                 return (
                     <div key={index} className="card">
                         <h3>username 👤</h3>
@@ -23,7 +27,7 @@ function Reviews() {
                     </div>
                 )
             })
-        )
+        }
     }
 
     return (
