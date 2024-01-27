@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import './App.css';
-import Navbar from "./Navbar";
+import { NavLink } from "react-router-dom";
+import NavBar from "./navbar";
 
 function HomePage({ isLoggedIn, setIsLoggedIn }) {
     const [username, setUsername] = useState('')
@@ -17,8 +18,8 @@ function HomePage({ isLoggedIn, setIsLoggedIn }) {
     return (
         <div className="HomePage">
             <header className="HomeHeader">
-                <h1 >SITE NAME</h1>
-                <Navbar />
+                <NavBar />
+                <h1 >Movie Reviewer</h1>
             </header>
         </div>
     )

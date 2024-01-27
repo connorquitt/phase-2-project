@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import './App.css';
 import MovieCard from "./MovieCard";
+import NavBar from "./navbar";
 
 function MoviePage() {
     const [movieList, setMovieList] = useState([])
@@ -14,17 +15,21 @@ function MoviePage() {
 
     function handleLike(event) {
         console.log(event.target.id)
-        let currentMovie = movieList.filter((movie) => {
-            return event.target.id == movie.id
+        let currentMovie = movieList.forEach((movie) => {
+             if(event.target.id == movie.id) {
+                console.log(movie)
+                console.log(movieList)
+                return movie.rating++ 
+            }
         })
-         console.log(currentMovie)
+        return movieList
     }
 
     return (
         <div className="MovieHeader">
-            <button>Home</button>
+            <NavBar />
             <h1>Movie List</h1>
-            <MovieCard movieList={movieList} handleLike={handleLike}/>
+            <MovieCard movieList={movieList} setMovieList={setMovieList} handleLike={handleLike}/>
         </div>
     )
 }
