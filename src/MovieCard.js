@@ -3,11 +3,7 @@ import { useState, useEffect } from "react";
 import './App.css';
 import { NavLink } from "react-router-dom";
 
-function MovieCard({ setMovieList, movieList, handleLike }) {
-
-    function handleClick(e) {
-        console.log(e.target.id)
-    }
+function MovieCard({ movieList, handleLike }) {
 
     return (
         movieList.map((movie) => {
