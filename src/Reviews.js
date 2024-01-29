@@ -20,6 +20,9 @@ function Reviews() {
         <div className="Reviews">
             <NavBar />
             <h1>{reviews.title} | {reviews.rating}/100 </h1>
+            <h2>Lead: {reviews.leads}</h2>
+            <h2>Director: {reviews.director}</h2>
+            <h3>Notes: {reviews.reviews}</h3>
         </div>
     )
 }

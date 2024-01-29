@@ -27,13 +27,13 @@ function HomePage() {
   }, [newMovie]);
 
   function handleClick(e) {
-    const title = document.getElementById("title").value;
-    const genre = document.getElementById("genre").value;
-    const length = document.getElementById("length").value;
-    const rating = document.getElementById("rating").value;
-    const lead = document.getElementById("lead").value;
-    const director = document.getElementById("director").value;
-    const review = document.getElementById("review").value;
+    let title = document.getElementById("title").value;
+    let genre = document.getElementById("genre").value;
+    let length = document.getElementById("length").value;
+    let rating = document.getElementById("rating").value;
+    let lead = document.getElementById("lead").value;
+    let director = document.getElementById("director").value;
+    let review = document.getElementById("review").value;
     setNewMovie({
       title: title,
       genres: genre,
@@ -52,14 +52,14 @@ function HomePage() {
         <h1>Movie Notes</h1>
       </header>
       <div className="Movie-Maker">
-        Title: <input type="text" id="title" />
+        Title: <input type="text" id="title" className="textbox"/>
         Genre: <input type="text" id="genre" />
         Lead: <input type="text" id="lead"/>
         Length: <input type="text" id="length" />
         Director: <input type="text" id="director" />
         Rating: <input type="text" id="rating" />
         Review: <input type="text" id="review"/>
-        <button onClick={handleClick}>Submit Movie</button>
+        <button onClick={handleClick}>Create Movie</button>
       </div>
     </div>
   );

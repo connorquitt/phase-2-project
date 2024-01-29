@@ -49,56 +49,6 @@
       "length": 126,
       "rating": 57,
       "reviews": "Rushed clumsy b-movie"
-    },
-    {
-      "title": "up",
-      "genres": "comedy",
-      "director": "NA",
-      "leads": "NA",
-      "length": "90",
-      "rating": "90",
-      "reviews": "NA",
-      "id": 6
-    },
-    {
-      "title": "f",
-      "genres": "f",
-      "director": "NA",
-      "leads": "NA",
-      "length": "3",
-      "rating": "65",
-      "reviews": "NA",
-      "id": 7
-    },
-    {
-      "title": "f",
-      "genres": "f",
-      "director": "NA",
-      "leads": "NA",
-      "length": "3",
-      "rating": "65",
-      "reviews": "NA",
-      "id": 8
-    },
-    {
-      "title": "f",
-      "genres": "f",
-      "director": "NA",
-      "leads": "NA",
-      "length": "3",
-      "rating": "65",
-      "reviews": "NA",
-      "id": 9
-    },
-    {
-      "title": "f",
-      "genres": "f",
-      "director": "",
-      "leads": "ff",
-      "length": "3",
-      "rating": "65",
-      "reviews": "",
-      "id": 10
     }
   ]
 }
