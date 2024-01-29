@@ -44,7 +44,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  color: white;
 }
 
 .HomeHeader {
@@ -55,6 +55,15 @@
   font-size: calc(10px + 2vmin);
   color: black;
 
+}
+
+.Movie-Maker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
 }
 
 .MovieHeader {
