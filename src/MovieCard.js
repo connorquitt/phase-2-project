@@ -17,7 +17,7 @@ function MovieCard({ setMovieList, movieList, handleLike }) {
                     <p>genres: add genres</p>
                     <p>length: {movie.length}</p>
                     <p>rating: {movie.rating} <button onClick={handleLike} id={movie.id}>👍</button> </p>
-                    <NavLink to={`/movies/${movie.id}`}><button id={movie.id} onClick={handleClick}>More Info</button></NavLink>
+                    <NavLink to={`/movies/${movie.id}`}><button id={movie.id}>More Info</button></NavLink>
                 </div>
             )
         })

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import './App.css';
 import MovieCard from "./MovieCard";
 import NavBar from "./navbar";
+import App from "./App";
 
 function MoviePage() {
     const [movieList, setMovieList] = useState([])
@@ -13,17 +14,28 @@ function MoviePage() {
     .then(data => setMovieList(data))
     }, [])
 
-    function handleLike(event) {
-        console.log(event.target.id)
-        let currentMovie = movieList.forEach((movie) => {
-             if(event.target.id == movie.id) {
-                console.log(movie)
-                console.log(movieList)
-                return movie.rating++ 
+    function handleLike(e) {
+            let id = e.target.id
+             let currentMovie = movieList.forEach((movie) => {
+             if(e.target.id == movie.id) {
+                movie.rating++
+                return (
+                    fetch(`http://localhost:3000/Movies/${id}`, {
+                        method: 'PATCH',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(movie)
+                    })
+                    .then(res => res.json())
+                    .then(data => console.log(data))
+                )
             }
         })
-        return movieList
     }
+
+
+
 
     return (
         <div className="MovieHeader">
