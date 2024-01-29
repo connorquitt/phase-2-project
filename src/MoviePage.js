@@ -41,12 +41,20 @@ function MoviePage() {
           setMovieList(updatedList);
         });
     }
+
+    function MovieCardList() {
+        return (
+            movieList.map((movie => {
+                return <MovieCard movie={movie} handleLike={handleLike} />
+            })
+        ))
+    }
   
     return (
       <div className="MovieHeader">
         <NavBar />
         <h1>Movie List</h1>
-        <MovieCard movieList={movieList} handleLike={handleLike} />
+        <MovieCardList />
       </div>
     );
   }

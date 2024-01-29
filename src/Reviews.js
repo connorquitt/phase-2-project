@@ -16,28 +16,10 @@ function Reviews() {
     }, [params.id])
 
 
-    function ReviewCard() {
-        if(typeof reviews === 'string') {
-           return <div>
-                    <p>Reviews Loading...</p>
-                </div>
-        } else {
-            return reviews.reviews.map((review, index) => {
-                return (
-                    <div key={index} className="card">
-                        <h3>👤</h3>
-                        <p>{review}</p>
-                    </div>
-                )
-            })
-        }
-    }
-
     return (
         <div className="Reviews">
             <NavBar />
-            <h1>{reviews.title} | {reviews.rating} 👍</h1>
-            <ReviewCard />
+            <h1>{reviews.title} | {reviews.rating}/100 </h1>
         </div>
     )
 }

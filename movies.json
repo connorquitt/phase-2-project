@@ -3,103 +3,102 @@
     {
       "id": 1,
       "title": "Don't Look Up",
-      "genres": [
-        "Comedy",
-        "Drama",
-        "Sci-Fi"
-      ],
+      "genres": "Comedy",
       "director": "Adam McKay",
-      "leads": [
-        "Leonardo DiCaprio",
-        "Jennifer Lawrence"
-      ],
+      "leads": "Leonardo DiCaprio",
       "length": 138,
-      "rating": 74,
-      "reviews": [
-        "A really good movie, yet painful to watch",
-        "Political satire at its best",
-        "Hits a Little Too Close to Home"
-      ]
+      "rating": 75,
+      "reviews": "A really good movie, yet painful to watch"
     },
     {
       "id": 2,
       "title": "The Lost Daughter",
-      "genres": [
-        "Drama"
-      ],
+      "genres": "Drama",
       "director": "Maggie Gyllenhaal",
-      "leads": [
-        "Olivia Colman",
-        "Jessie Buckley"
-      ],
+      "leads": "Olivia Colman",
       "length": 121,
-      "rating": 69,
-      "reviews": [
-        "DISAPPOINTING FINALE",
-        "Olivia Colman gets intense",
-        "Not impressed- good acting though in boring film"
-      ]
+      "rating": 70,
+      "reviews": "DISAPPOINTING FINALE"
     },
     {
       "id": 3,
       "title": "The 355",
-      "genres": [
-        "Action",
-        "Thriller"
-      ],
+      "genres": "Thriller",
       "director": "Simon Kinberg",
-      "leads": [
-        "Jessica Chastain",
-        "penelope Cruz"
-      ],
+      "leads": "Jessica Chastain",
       "length": 122,
-      "rating": 56,
-      "reviews": [
-        "Essentially a big and silly version of a Charlie's Angels episode",
-        "Almost fell asleep",
-        "Underrated Star-Studded Action"
-      ]
+      "rating": 57,
+      "reviews": "Essentially a big and silly version of a Charlie's Angels episode"
     },
     {
       "id": 4,
       "title": "Spider-Man: No Way Home",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Fantasy"
-      ],
+      "genres": "Fantasy",
       "director": "Jon Watts",
-      "leads": [
-        "Tom Holland",
-        "Zendaya"
-      ],
+      "leads": "Zendaya",
       "length": 148,
-      "rating": 82,
-      "reviews": [
-        "Phenomenal conclusion",
-        "Somehow better than Endgame",
-        "Great concept, mediocre execution"
-      ]
+      "rating": 84,
+      "reviews": "Phenomenal conclusion"
     },
     {
       "id": 5,
       "title": "The Matrix Resurrections",
-      "genres": [
-        "Action",
-        "Sci-Fi"
-      ],
+      "genres": "Sci-Fi",
       "director": "Jane Campion",
-      "leads": [
-        "Benedict Cumberbatch",
-        "Kirsten Dunst"
-      ],
+      "leads": "Benedict Cumberbatch",
       "length": 126,
       "rating": 57,
-      "reviews": [
-        "Rushed clumsy b-movie",
-        "Feels like cheap TV",
-        "It's hard to figure out what's the purpose here"
-      ]
+      "reviews": "Rushed clumsy b-movie"
+    },
+    {
+      "title": "up",
+      "genres": "comedy",
+      "director": "NA",
+      "leads": "NA",
+      "length": "90",
+      "rating": "90",
+      "reviews": "NA",
+      "id": 6
+    },
+    {
+      "title": "f",
+      "genres": "f",
+      "director": "NA",
+      "leads": "NA",
+      "length": "3",
+      "rating": "65",
+      "reviews": "NA",
+      "id": 7
+    },
+    {
+      "title": "f",
+      "genres": "f",
+      "director": "NA",
+      "leads": "NA",
+      "length": "3",
+      "rating": "65",
+      "reviews": "NA",
+      "id": 8
+    },
+    {
+      "title": "f",
+      "genres": "f",
+      "director": "NA",
+      "leads": "NA",
+      "length": "3",
+      "rating": "65",
+      "reviews": "NA",
+      "id": 9
+    },
+    {
+      "title": "f",
+      "genres": "f",
+      "director": "",
+      "leads": "ff",
+      "length": "3",
+      "rating": "65",
+      "reviews": "",
+      "id": 10
     }
   ]
 }
