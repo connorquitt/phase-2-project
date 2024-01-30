@@ -43,6 +43,13 @@ function HomePage() {
       rating: rating,
       reviews: review
     });
+    document.getElementById("title").value = "";
+    document.getElementById("genre").value = "";
+    document.getElementById("length").value = "";
+    document.getElementById("rating").value = "";
+    document.getElementById("lead").value = "";
+    document.getElementById("director").value = "";
+    document.getElementById("review").value = "";
   }
 
   return (
