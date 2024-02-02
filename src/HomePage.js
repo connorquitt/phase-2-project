@@ -17,7 +17,7 @@ function HomePage() {
 
   useEffect(() => {
     if (newMedia.title !== "") {
-      fetch("http://localhost:3000/Movies", {
+      fetch("http://localhost:3000/Media", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -29,21 +29,28 @@ function HomePage() {
   }, [newMedia]);
 
   function HandleClick(e) {
-    setTitle(document.getElementById('title').value)
-    setMediaType(document.getElementById('mediaType').value)
-    setLength(document.getElementById('length').value)
-    setCreator(document.getElementById('creator').value)
-    setThoughts(document.getElementById('thoughts').value)
-    setRating(document.getElementById('rating').value)
-
-    return setNewMedia({
-      title: title,
-      mediaType: mediaType,
-      creator: creator,
-      length: length,
-      rating: rating,
-      thoughts: thoughts
+    const newTitle = document.getElementById('title').value;
+    const newMediaType = document.getElementById('mediaType').value;
+    const newLength = document.getElementById('length').value;
+    const newCreator = document.getElementById('creator').value;
+    const newThoughts = document.getElementById('thoughts').value;
+    const newRating = document.getElementById('rating').value;
+  
+    setNewMedia({
+      title: newTitle,
+      mediaType: newMediaType,
+      creator: newCreator,
+      length: newLength,
+      rating: newRating,
+      thoughts: newThoughts
     });
+  
+    document.getElementById('title').value = '';
+    document.getElementById('mediaType').value = '';
+    document.getElementById('length').value = '';
+    document.getElementById('creator').value = '';
+    document.getElementById('thoughts').value = '';
+    document.getElementById('rating').value = '';
   }
 
   return (

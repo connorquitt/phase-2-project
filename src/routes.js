@@ -1,6 +1,6 @@
 import React from "react";
 import HomePage from "./HomePage";
-import MoviePage from "./MoviePage";
+import MediaPage from "./MediaPage";
 import Reviews from "./Reviews";
 
 const routes = [
@@ -9,11 +9,11 @@ const routes = [
         element: <HomePage />
     },
     {
-        path: '/movies',
-        element: <MoviePage />,
+        path: '/media',
+        element: <MediaPage />,
     },
     {
-        path: '/movies/:id',
+        path: '/media/:id',
         element: <Reviews />
     }
 ]

@@ -1,0 +1,49 @@
+{
+  "Media": [
+    {
+      "title": "Alan Wake",
+      "mediaType": "Game (Horror)",
+      "creator": "Remedy Entertainment",
+      "length": "10hr",
+      "rating": "7",
+      "thoughts": "slow start/hard to get into but after a few hours it's super engaging and fun",
+      "id": 1
+    },
+    {
+      "title": "Baby Driver",
+      "mediaType": "Movie (comedy/Action)",
+      "creator": "Edgar Wright",
+      "length": "2hr",
+      "rating": "8",
+      "thoughts": "super stressful and funny",
+      "id": 2
+    },
+    {
+      "title": "Cult of the Lamb",
+      "mediaType": "Game",
+      "creator": "Massive Monster",
+      "length": "indefinate",
+      "rating": "9",
+      "thoughts": "chill farming sim vibes with binding of issac style combat and a really compelling story/amazing animation",
+      "id": 3
+    },
+    {
+      "title": "Spider-Man: Across the Spider-Verse",
+      "mediaType": "Movie (comedy)",
+      "creator": "Marvel",
+      "length": "2hr 20min",
+      "rating": "10",
+      "thoughts": "amazing animation, amazing story, really engaging and interesting all the way thru",
+      "id": 4
+    },
+    {
+      "title": "Super Smash Brothers Ultimate",
+      "mediaType": "Game (fighting)",
+      "creator": "Nintendo",
+      "length": "indefinate",
+      "rating": "9",
+      "thoughts": "my favorite fighting game :)",
+      "id": 5
+    }
+  ]
+}

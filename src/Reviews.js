@@ -10,7 +10,7 @@ function Reviews() {
     const params = useParams()
 
     useEffect(() =>{
-        fetch(`http://localhost:3000/Movies/${params.id}`)
+        fetch(`http://localhost:3000/Media/${params.id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [params.id])
@@ -19,10 +19,9 @@ function Reviews() {
     return (
         <div className="Reviews">
             <NavBar />
-            <h1>{reviews.title} | {reviews.rating}/100 </h1>
-            <h2>Lead: {reviews.leads}</h2>
-            <h2>Director: {reviews.director}</h2>
-            <h3>Notes: {reviews.reviews}</h3>
+            <h1>{reviews.title} | {reviews.rating}/10 </h1>
+            <p>Creator: {reviews.creator}</p>
+            <p>Thoughts: {reviews.thoughts}</p>
         </div>
     )
 }
