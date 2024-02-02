@@ -1,72 +1,65 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "./navbar";
-import MovieCard from "./MovieCard";
 
 function HomePage() {
-  const [newMovie, setNewMovie] = useState({
+  const [newMedia, setNewMedia] = useState({
     title: "",
-    genres: "",
-    lead: "NA",
-    length: "",
-    rating: "",
-    reviews: "NA"
+    genre: "",
+    playTime: "",
+    thoughts: ""
   });
+  const [title, setTitle] = useState('')
+  const [mediaType, setMediaType] = useState('')
+  const [length, setLength] = useState('')
+  const [creator, setCreator] = useState('')
+  const [thoughts, setThoughts] = useState('')
+  const [rating, setRating] = useState('')
 
   useEffect(() => {
-    if (newMovie.title !== "") {
+    if (newMedia.title !== "") {
       fetch("http://localhost:3000/Movies", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(newMovie)
+        body: JSON.stringify(newMedia)
       })
         .then(res => res.json())
-        .then(data => console.log(data));
     }
-  }, [newMovie]);
+  }, [newMedia]);
 
-  function handleClick(e) {
-    let title = document.getElementById("title").value;
-    let genre = document.getElementById("genre").value;
-    let length = document.getElementById("length").value;
-    let rating = document.getElementById("rating").value;
-    let lead = document.getElementById("lead").value;
-    let director = document.getElementById("director").value;
-    let review = document.getElementById("review").value;
-    setNewMovie({
+  function HandleClick(e) {
+    setTitle(document.getElementById('title').value)
+    setMediaType(document.getElementById('mediaType').value)
+    setLength(document.getElementById('length').value)
+    setCreator(document.getElementById('creator').value)
+    setThoughts(document.getElementById('thoughts').value)
+    setRating(document.getElementById('rating').value)
+
+    return setNewMedia({
       title: title,
-      genres: genre,
-      director: director,
-      leads: lead,
+      mediaType: mediaType,
+      creator: creator,
       length: length,
       rating: rating,
-      reviews: review
+      thoughts: thoughts
     });
-    document.getElementById("title").value = "";
-    document.getElementById("genre").value = "";
-    document.getElementById("length").value = "";
-    document.getElementById("rating").value = "";
-    document.getElementById("lead").value = "";
-    document.getElementById("director").value = "";
-    document.getElementById("review").value = "";
   }
 
   return (
     <div className="HomePage">
       <header className="HomeHeader">
         <NavBar />
-        <h1>Movie Notes</h1>
+        <h1>Media Notes</h1>
       </header>
       <div className="Movie-Maker">
-        Title: <input type="text" id="title" className="textbox"/>
-        Genre: <input type="text" id="genre" />
-        Lead: <input type="text" id="lead"/>
+        Title: <input type="text" id="title" />
+        Media Type: <input type="text" id="mediaType" />
+        Creator: <input type="text" id="creator" />
         Length: <input type="text" id="length" />
-        Director: <input type="text" id="director" />
-        Rating: <input type="text" id="rating" />
-        Review: <input type="text" id="review"/>
-        <button onClick={handleClick}>Create Movie</button>
+        Rating/10: <input type="text" id="rating" />
+        Thoughts: <input type="text" id="thoughts" />
+        <button onClick={HandleClick}>Create Review</button>
       </div>
     </div>
   );
