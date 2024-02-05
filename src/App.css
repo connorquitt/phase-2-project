@@ -44,7 +44,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .HomeHeader {
@@ -57,7 +57,7 @@
 
 }
 
-.Movie-Maker {
+.Media-Maker {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,5 +114,17 @@
 a.active {
   background: black;
   color: white;
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 0%;
 }
 

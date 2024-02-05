@@ -10,12 +10,5 @@ function NavBar() {
     )
 }
 
-function NavMoreInfo() {
-    return (
-        <nav className='navbar'>
-            <NavLink to='/movies/:id'>More Info</NavLink>
-        </nav>
-    )
-}
 
 export default NavBar;

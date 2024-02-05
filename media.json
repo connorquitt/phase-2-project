@@ -2,7 +2,7 @@
   "Media": [
     {
       "title": "Alan Wake",
-      "mediaType": "Game (Horror)",
+      "mediaType": "Game",
       "creator": "Remedy Entertainment",
       "length": "10hr",
       "rating": "7",
@@ -11,7 +11,7 @@
     },
     {
       "title": "Baby Driver",
-      "mediaType": "Movie (comedy/Action)",
+      "mediaType": "Movie",
       "creator": "Edgar Wright",
       "length": "2hr",
       "rating": "8",
@@ -29,7 +29,7 @@
     },
     {
       "title": "Spider-Man: Across the Spider-Verse",
-      "mediaType": "Movie (comedy)",
+      "mediaType": "Movie",
       "creator": "Marvel",
       "length": "2hr 20min",
       "rating": "10",
@@ -38,7 +38,7 @@
     },
     {
       "title": "Super Smash Brothers Ultimate",
-      "mediaType": "Game (fighting)",
+      "mediaType": "Game",
       "creator": "Nintendo",
       "length": "indefinate",
       "rating": "9",
