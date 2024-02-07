@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from "./HomePage";
 import MediaPage from "./MediaPage";
 import Reviews from "./Reviews";
 
 export default function App() {
-    const [hi, setHi] = useState('hello')
     const routes = createBrowserRouter([
         {
             path: '/',
-            element: <HomePage hi={hi} setHi={setHi}/>
+            element: <HomePage />
         },
         {
             path: '/media',
@@ -23,7 +22,7 @@ export default function App() {
 
     return(
         <div>
-            <RouterProvider routes={routes}/>
+            <RouterProvider router={routes}/>
         </div>
     )
 }

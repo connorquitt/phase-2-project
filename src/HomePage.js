@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "./navbar";
 import MediaCard from "./MediaCard";
-import App from "./App";
 
 function HomePage({ hi, setHi }) {
   const [mediaList, setMediaList] = useState([])
