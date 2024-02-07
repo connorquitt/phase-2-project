@@ -3,16 +3,11 @@ import { useState, useEffect } from "react";
 import './App.css';
 import MediaCard from "./MediaCard";
 import NavBar from "./navbar";
+import AddMedia from "./AddMedia";
 
 function MediaPage() {
   //State Variables
-    const [mediaList, setMediaList] = useState([]);
-    const [title, setTitle] = useState('')
-    const [mediaType, setMediaType] = useState('')
-    const [creator, setCreator] = useState('')
-    const [length, setLength] = useState('')
-    const [rating, setRating] = useState('')
-    const [thoughts, setThoughts] = useState('')
+    const [mediaList, setMediaList] = useState([])
     const [newMedia, setNewMedia] = useState({
       title: '',
       mediaType: '',
@@ -51,23 +46,6 @@ function MediaPage() {
             })
         ))
     }
-
-    function handleClick() {
-      setNewMedia({
-        title: title,
-        mediaType: mediaType,
-        creator: creator,
-        length: length,
-        rating: rating,
-        thoughts: thoughts
-      })
-      setTitle('')
-      setMediaType('')
-      setCreator('')
-      setLength('')
-      setRating('')
-      setThoughts('')
-    }
   
     return (
       <div className="MovieHeader">
@@ -78,15 +56,7 @@ function MediaPage() {
           <MediaCardList />
           </div>
           <div className='column'>
-          <div className="Media-Maker">
-            Title: <input type="text" value={title} onChange={(e) => {setTitle(e.target.value)}}/>
-            Media Type: <input type="text" value={mediaType} onChange={(e) => {setMediaType(e.target.value)}}/>
-            Creator: <input type="text" value={creator} onChange={(e) => {setCreator(e.target.value)}}/>
-            Length: <input type="text" value={length} onChange={(e) => {setLength(e.target.value)}}/>
-            Rating/10: <input type="text" value={rating} onChange={(e) => {setRating(e.target.value)}}/>
-            Thoughts: <input type="text" value={thoughts} onChange={(e) => setThoughts(e.target.value)}/>
-            <button onClick={handleClick}>Create Review</button>
-          </div>
+          <AddMedia setNewMedia={setNewMedia} />
           </div>
         </div>
       </div>
