@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "./navbar";
 import MediaCard from "./MediaCard";
+import App from "./App";
 
-function HomePage() {
+function HomePage({ hi, setHi }) {
   const [mediaList, setMediaList] = useState([])
   const [filteredMediaList, setFilteredMediaList] = useState([])
-
   function handleChange(e) {
     const newList = mediaList.filter((media) => media.mediaType == e.target.value)
     setFilteredMediaList(newList)
@@ -25,10 +25,16 @@ function HomePage() {
   ))
 }
 
+function checkState() {
+  console.log(hi)
+}
+
+
   return (
     <div className="HomePage">
       <header className="HomeHeader">
         <NavBar />
+        <button onClick={checkState} value='hi'/>
         <h1>Media Notes</h1>
       </header>
       <label for='mediaType'>See Entries</label>

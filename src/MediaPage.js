@@ -8,11 +8,19 @@ import AddMedia from "./AddMedia";
 function MediaPage() {
   //State Variables
     const [mediaList, setMediaList] = useState([]);
+    const [title, setTitle] = useState('')
+    const [mediaType, setMediaType] = useState('')
+    const [creator, setCreator] = useState('')
+    const [length, setLength] = useState('')
+    const [rating, setRating] = useState('')
+    const [thoughts, setThoughts] = useState('')
     const [newMedia, setNewMedia] = useState({
-      title: "",
-      genre: "",
-      playTime: "",
-      thoughts: ""
+      title: '',
+      mediaType: '',
+      creator: '',
+      length: '',
+      rating: '',
+      thoughts: ''
     });
     
     //useEffect/Fetches
@@ -45,29 +53,15 @@ function MediaPage() {
         ))
     }
 
-    function handleClick() {
-      const newTitle = document.getElementById('title').value;
-      const newMediaType = document.getElementById('mediaType').value;
-      const newLength = document.getElementById('length').value;
-      const newCreator = document.getElementById('creator').value;
-      const newThoughts = document.getElementById('thoughts').value;
-      const newRating = document.getElementById('rating').value;
-    
+    function handleClick() { 
       setNewMedia({
-        title: newTitle,
-        mediaType: newMediaType,
-        creator: newCreator,
-        length: newLength,
-        rating: newRating,
-        thoughts: newThoughts
+        title: title,
+        mediaType: mediaType,
+        creator: creator,
+        length: length,
+        rating: rating,
+        thoughts: thoughts
       });
-    
-      document.getElementById('title').value = '';
-      document.getElementById('mediaType').value = '';
-      document.getElementById('length').value = '';
-      document.getElementById('creator').value = '';
-      document.getElementById('thoughts').value = '';
-      document.getElementById('rating').value = '';
     }
   
     return (
