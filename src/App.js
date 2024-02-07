@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import React, { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from "./HomePage";
 import MediaPage from "./MediaPage";
 import Reviews from "./Reviews";

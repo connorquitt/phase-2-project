@@ -111,6 +111,19 @@
   
 }
 
+.to-Dairy {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 150px;
+  padding: 20px;
+  margin: 0 6px 6px;
+  background: lightblue;
+  text-decoration: none;
+  text-align: center;
+  font-size: min(15vw, 18px) ;
+  color: black;
+}
+
 a.active {
   background: black;
   color: white;

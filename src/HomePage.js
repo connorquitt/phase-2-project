@@ -1,48 +1,15 @@
-import React, { useState, useEffect } from "react";
-import NavBar from "./navbar";
-import MediaCard from "./MediaCard";
+import { NavLink } from "react-router-dom";
 
-function HomePage({ hi, setHi }) {
-  const [mediaList, setMediaList] = useState([])
-  const [filteredMediaList, setFilteredMediaList] = useState([])
-  function handleChange(e) {
-    const newList = mediaList.filter((media) => media.mediaType == e.target.value)
-    setFilteredMediaList(newList)
-  }
-
-  useEffect(() => {
-    fetch('http://localhost:3000/Media')
-     .then(res => res.json())
-     .then(data => setMediaList(data))
- }, [])
-
- function MediaCardList() {
-  return (
-      filteredMediaList.map((media => {
-          return <MediaCard media={media} key={media.id}/>
-      })
-  ))
-}
-
-function checkState() {
-  console.log(hi)
-}
+function HomePage() {
 
 
   return (
     <div className="HomePage">
       <header className="HomeHeader">
-        <NavBar />
-        <button onClick={checkState} value='hi'/>
-        <h1>Media Notes</h1>
+        <h1>Media Diary</h1>
+        <NavLink to={`/media`}><button className="to-Dairy" >Go To Diary</button></NavLink>
+        <p>the perfect place to keep track of any media you've completed this year!</p>
       </header>
-      <label for='mediaType'>See Entries</label>
-        <select id='mediaType' name='mediaType' onChange={handleChange}>
-          <option value='Media Types'>Media Types</option>
-          <option value='Movie'>Movie</option>
-          <option value='Game'>Game</option>
-        </select>
-        <MediaCardList />
     </div>
   );
 }
