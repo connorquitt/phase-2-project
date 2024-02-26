@@ -8,14 +8,6 @@ import AddMedia from "./AddMedia";
 function MediaPage() {
   //State Variables
     const [mediaList, setMediaList] = useState([])
-    const [newMedia, setNewMedia] = useState({
-      title: '',
-      mediaType: '',
-      creator: '',
-      length: '',
-      rating: '',
-      thoughts: ''
-    });
     
     //useEffect/Fetches
     useEffect(() => {
@@ -23,20 +15,6 @@ function MediaPage() {
         .then(res => res.json())
         .then(data => setMediaList(data))
     }, []);
-
-    useEffect(() => {
-      if (newMedia.title !== "") {
-        fetch("http://localhost:3000/Media", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(newMedia)
-        })
-          .then(res => res.json())
-          .then(data => setMediaList([...mediaList, data]))
-      }
-    }, [newMedia]);
   
     //functions
     function MediaCardList() {
@@ -50,13 +28,13 @@ function MediaPage() {
     return (
       <div className="MovieHeader">
         <NavBar />
-        <h1>Movie List</h1>
+        <h1>Media List</h1>
         <div className='row'>
           <div className='column'>
           <MediaCardList />
           </div>
           <div className='column'>
-          <AddMedia setNewMedia={setNewMedia} />
+          <AddMedia mediaList={mediaList} setMediaList={setMediaList} />
           </div>
         </div>
       </div>
