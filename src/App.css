@@ -141,3 +141,10 @@ a.active {
   width: 0%;
 }
 
+#delete_button {
+  padding: 1px;
+  float: right;
+  margin-top: 10px;
+  margin-right: -5px;
+}
+

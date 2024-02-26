@@ -20,7 +20,7 @@ function MediaPage() {
     function MediaCardList() {
         return (
             mediaList.map((media => {
-                return <MediaCard media={media} key={media.id}/>
+                return <MediaCard media={media} key={media.id} setMediaList={setMediaList}/>
             })
         ))
     }
@@ -34,7 +34,7 @@ function MediaPage() {
           <MediaCardList />
           </div>
           <div className='column'>
-          <AddMedia mediaList={mediaList} setMediaList={setMediaList} />
+          <AddMedia mediaList={mediaList} setMediaList={setMediaList}/>
           </div>
         </div>
       </div>
