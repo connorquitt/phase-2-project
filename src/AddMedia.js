@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function AddMedia({ setNewMedia }) {
+export default function AddMedia({ mediaList, setMediaList }) {
     const [title, setTitle] = useState('')
     const [mediaType, setMediaType] = useState('')
     const [creator, setCreator] = useState('')
@@ -8,16 +8,30 @@ export default function AddMedia({ setNewMedia }) {
     const [rating, setRating] = useState('')
     const [thoughts, setThoughts] = useState('')
 
+    function addMedia(data) {
+      setMediaList([...mediaList, data])
+    }
+
     function handleSubmit(e) {
         e.preventDefault();
-        setNewMedia({
-          title: title,
-          mediaType: mediaType,
-          creator: creator,
-          length: length,
-          rating: rating,
-          thoughts: thoughts
-        })
+        const newMedia = {
+          'title': title,
+          'mediaType': mediaType,
+          'creator': creator,
+          'length': length,
+          'rating': rating,
+          'thoughts': thoughts
+        }
+          fetch("http://localhost:3000/Media", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newMedia)
+          })
+            .then(res => res.json())
+            .then(data => addMedia(data))
+        
         
         setTitle('')
         setMediaType('')
